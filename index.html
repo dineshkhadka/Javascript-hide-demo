@@ -46,39 +46,32 @@
          *  DONT USE THIS METHOD!!!
 
         */
-    var clicked = 0;
+    var clicked = 0; // Set the initial variable to 0
 
     function fire() {
 
         var getLink = document.getElementById("toggle-this");
         if (clicked == 0) {
-            getLink.classList.add("hide");
-            clicked = 1
+            getLink.classList.add("hide"); // When "clicked" is 0. Add the class 'hide'
+            clicked = 1;
         } else {
-            getLink.classList.remove("hide");
-            clicked = 0
+            getLink.classList.remove("hide"); // Otherwise. remove class 'hide'
+            clicked = 0; 
         }
 
 
 
     }
-    var el = document.getElementById("toggle-button");
-    el.addEventListener("click", fire);
+    var el = document.getElementById("toggle-button"); // get the element "toggle-button"
+    el.addEventListener("click", fire);  // listen for a click in element "toggle button"
 
     //Jquery method. Recommended
 
 
     $(document).ready(function () {
-        /*if ($('#jquery-toggle-this').hasClass('.hide')){
-            this.removeClass('.hide')
-        }
-        else{
-            this.addClass('.hide')
-        }
-        */
         $("#jquery-toggle-button").click(
             function () {
-                $("#jquery-toggle-this").toggleClass("hide");
+                $("#jquery-toggle-this").toggleClass("hide"); // This auto removes or adds class hide
             });
 
 
