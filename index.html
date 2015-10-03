@@ -6,38 +6,35 @@
 <head>
     <title>Hide and show demo</title>
     <style type="text/css">
-
-    .hide{
-
-        display: none;
-    }
-
+        .hide {
+            display: none;
+        }
     </style>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    
+
 </head>
 
 <body>
 
 
-<h1>Javascript and HTML</h1>
-<div id="toggle-this">
-<p>
-    Bruce Willis was a ghost in "The Sixth Sense" movie
-</p>
+    <h1>Javascript and HTML</h1>
+    <div id="toggle-this">
+        <p>
+            Bruce Willis was a ghost in "The Sixth Sense" movie
+        </p>
 
-</div>
-<button id="toggle-button">Click to toggle spoilers</button>
+    </div>
+    <button id="toggle-button">Click to toggle spoilers</button>
 
-<br>
-<h1> Jquery Implemantation</h1>
-<div id="jquery-toggle-this">
-<p>
-    Bruce Willis was a ghost in "The Sixth Sense" movie
-</p>
+    <br>
+    <h1> Jquery Implemantation</h1>
+    <div id="jquery-toggle-this">
+        <p>
+            Bruce Willis was a ghost in "The Sixth Sense" movie
+        </p>
 
-</div>
-<button id="jquery-toggle-button">Click to toggle spoilers</button>
+    </div>
+    <button id="jquery-toggle-button">Click to toggle spoilers</button>
 
 
 
@@ -45,19 +42,19 @@
 
 <script type="text/javascript">
     /*
-     *  This demos pure javascript and html Implemtation
-     *  DONT USE THIS METHOD!!!
+         *  This demos pure javascript and html Implemtation
+         *  DONT USE THIS METHOD!!!
 
-    */
+        */
     var clicked = 0;
-    function fire(){
-        
+
+    function fire() {
+
         var getLink = document.getElementById("toggle-this");
-        if (clicked == 0){
+        if (clicked == 0) {
             getLink.classList.add("hide");
             clicked = 1
-        }
-        else{
+        } else {
             getLink.classList.remove("hide");
             clicked = 0
         }
@@ -71,7 +68,7 @@
     //Jquery method. Recommended
 
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         /*if ($('#jquery-toggle-this').hasClass('.hide')){
             this.removeClass('.hide')
         }
@@ -86,7 +83,6 @@
 
 
     });
+</script>
 
-
-    </script>
 </html>
